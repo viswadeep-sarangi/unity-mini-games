@@ -88,9 +88,9 @@ public class GameController : MonoBehaviour
             if (CheckGridForWin(row, col, out int lineShow))
             {
                 // Game ends. Current Player wins
-                await Task.Delay(1000);
+                await Task.Delay(250);
                 HideAllLines(showLine: lineShow);
-                await Task.Delay(2000);
+                await Task.Delay(1000);
                 _uiController.GameOver(GetCurrentPlayer());
             }
             else
